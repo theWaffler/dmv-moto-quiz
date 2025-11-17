@@ -1,0 +1,249 @@
+/* Base layout */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #111;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 0.75rem 2rem;
+}
+
+/* Headings / text */
+
+h1 {
+  margin: 0 0 0.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.subtitle {
+  margin: 0 0 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.mode-info {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.75rem;
+  padding: 0 0.25rem;
+}
+
+/* Mode buttons */
+
+.mode-select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.mode-select button {
+  flex: 1 1 130px;
+  min-height: 3rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+#test-mode-btn {
+  background: #0d6efd;
+  color: #fff;
+}
+
+#study-mode-btn {
+  background: #198754;
+  color: #fff;
+}
+
+.mode-sub {
+  display: inline-block;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* Cards */
+
+.card {
+  margin-top: 0.5rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  padding: 0.9rem 0.9rem 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Question / progress */
+
+.progress {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.question-text {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+/* Options */
+
+.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+}
+
+.options-list li {
+  margin-bottom: 0.5rem;
+}
+
+.option-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.65rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease, transform 0.05s ease;
+  font-size: 0.95rem;
+}
+
+.option-input {
+  margin-top: 0.15rem;
+  min-width: 1.1rem;
+  min-height: 1.1rem;
+}
+
+.option-label:hover {
+  border-color: #0d6efd;
+}
+
+.option-label:active {
+  transform: scale(0.99);
+}
+
+.option-correct {
+  background: #d4edda;
+  border-color: #198754;
+}
+
+.option-incorrect {
+  background: #f8d7da;
+  border-color: #dc3545;
+}
+
+/* Feedback / controls */
+
+.feedback {
+  min-height: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.feedback.correct {
+  color: #155724;
+}
+
+.feedback.incorrect {
+  color: #721c24;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Buttons */
+
+button {
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  min-height: 2.6rem;
+  flex: 1;
+}
+
+#check-btn {
+  background: #0d6efd;
+  color: #fff;
+}
+
+#next-btn,
+#restart-btn {
+  background: #6c757d;
+  color: #fff;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Result card */
+
+#result-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+}
+
+#score-text {
+  white-space: pre-line;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* Larger screens */
+
+@media (min-width: 640px) {
+  .container {
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 1.1rem 1.25rem 1.25rem;
+  }
+
+  .question-text {
+    font-size: 1.05rem;
+  }
+
+  .option-label {
+    font-size: 0.95rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}

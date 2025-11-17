@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>California Motorcycle Practice Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>California Motorcycle Practice Quiz</h1>
+
+    <p class="subtitle">
+      Use this to practice for the DMV motorcycle written test. Works best in portrait mode on your phone.
+    </p>
+
+    <section class="mode-select">
+      <button id="test-mode-btn">Test Mode<br><span class="mode-sub">25 Qs · 80% to pass</span></button>
+      <button id="study-mode-btn">Study Mode<br><span class="mode-sub">All 40 Qs</span></button>
+    </section>
+
+    <section id="mode-info" class="mode-info"></section>
+
+    <div id="quiz-card" class="card hidden">
+      <div id="progress" class="progress"></div>
+      <h2 id="question-text" class="question-text"></h2>
+
+      <ul id="options-list" class="options-list"></ul>
+
+      <div id="feedback" aria-live="polite" class="feedback"></div>
+
+      <div class="controls">
+        <button id="check-btn">Check Answer</button>
+        <button id="next-btn" disabled>Next Question</button>
+      </div>
+    </div>
+
+    <div id="result-card" class="card hidden">
+      <h2 id="result-title">Quiz Complete</h2>
+      <p id="score-text"></p>
+      <button id="restart-btn">Restart in Same Mode</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
