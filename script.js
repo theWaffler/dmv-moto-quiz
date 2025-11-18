@@ -9,6 +9,666 @@ const MODE_STUDY     = "study";
 
 const ALL_QUESTIONS = [
   {
+       question: "A rider must ______ when mounting and dismounting a motorcycle.",
+    options: [
+      "Squeeze the front brake",
+      "Squeeze the clutch",
+      "Shift gears",
+      "Roll on the throttle"
+    ],
+    correctIndex: 0,
+    explanation: "Squeezing the front brake keeps the motorcycle from rolling while you get on or off."
+  },
+  {
+    question: "Why is it good practice to squeeze the clutch before starting a motorcycle?",
+    options: [
+      "In case you want to shift gears",
+      "To keep the motorcycle from lurching forward if it is in gear",
+      "So the engine will start",
+      "To keep the engine from over-revving"
+    ],
+    correctIndex: 1,
+    explanation: "If the bike is in gear, starting without the clutch can make it jump forward."
+  },
+  {
+    question: "When looking through a curve, what should the rider be looking for?",
+    options: [
+      "Surface conditions such as sand or gravel",
+      "Whether the curve radius is increasing or decreasing",
+      "Oncoming vehicles that may be in your lane",
+      "Any or all of the above"
+    ],
+    correctIndex: 3,
+    explanation: "You scan for road surface, curve shape, traffic, and other hazards together."
+  },
+  {
+    question: "Is it okay not to dim your headlights if an oncoming driver does not dim theirs?",
+    options: [
+      "Yes, they need to know they are blinding you",
+      "Yes, until they dim theirs",
+      "No, now there are two blind drivers",
+      "No, but you should honk your horn"
+    ],
+    correctIndex: 2,
+    explanation: "Two drivers with high beams on just doubles the risk. Don’t escalate."
+  },
+  {
+    question: "Central clear vision is approximately:",
+    options: [
+      "A 3° cone",
+      "A 10° cone",
+      "A 45° cone",
+      "180°"
+    ],
+    correctIndex: 0,
+    explanation: "Central sharp vision is only about a 3° cone; the rest is peripheral."
+  },
+  {
+    question: "Most single-vehicle motorcycle crashes occur at intersections and ______.",
+    options: [
+      "Stop lights",
+      "Bus stops",
+      "Curves",
+      "Hills"
+    ],
+    correctIndex: 2,
+    explanation: "Single-vehicle motorcycle crashes usually happen in curves."
+  },
+  {
+    question: "What are possible positions of a motorcycle fuel valve on bikes equipped with one?",
+    options: [
+      "Off",
+      "On",
+      "Reserve",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "Carbureted motorcycles typically have Off, On, and Reserve positions."
+  },
+  {
+    question: "To rev the engine means:",
+    options: [
+      "Cause the engine RPM to decrease",
+      "Cause the engine RPM to increase",
+      "Shut off the engine",
+      "Start the engine"
+    ],
+    correctIndex: 1,
+    explanation: "Revving the engine means increasing RPM with the throttle."
+  },
+  {
+    question: "Gauntlet gloves:",
+    options: [
+      "Extend past the wrist",
+      "Prevent cold air from going up the sleeves",
+      "Are typically worn in colder weather",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "Gauntlet gloves extend past the wrist and block cold air, making them good in cold weather."
+  },
+  {
+    question: "The motorcycle throttle is operated by:",
+    options: [
+      "Pushing it in",
+      "Pulling it out",
+      "Twisting it toward the rider",
+      "Twisting it away from the rider"
+    ],
+    correctIndex: 2,
+    explanation: "Rolling the throttle toward you increases engine RPM."
+  },
+  {
+    question: "Squaring the handlebars means:",
+    options: [
+      "Handlebars are centered and not turned left or right",
+      "Handlebars are turned right",
+      "Handlebars are turned left",
+      "None of the above"
+    ],
+    correctIndex: 0,
+    explanation: "Squared bars are straight ahead, which is the correct position for straight-line quick stops."
+  },
+  {
+    question: "In the T-CLOCS inspection, the “O” stands for:",
+    options: [
+      "Objects",
+      "Observe",
+      "Oil",
+      "Okay"
+    ],
+    correctIndex: 2,
+    explanation: "T-CLOCS is a pre-ride checklist; O = Oil and other fluids."
+  },
+  {
+    question: "How can a rider reduce total stopping distance?",
+    options: [
+      "Covering the controls",
+      "Using both brakes progressively without skidding",
+      "Practicing braking skills",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "Reducing reaction time and using proper braking technique shortens total stopping distance."
+  },
+  {
+    question: "The most common scenario in an intersection crash involving a motorcycle and another vehicle is:",
+    options: [
+      "A right-turning vehicle in front of the motorcycle",
+      "A left-turning vehicle in front of the motorcycle",
+      "A vehicle hitting the motorcycle from behind",
+      "A head-on collision"
+    ],
+    correctIndex: 1,
+    explanation: "Most multi-vehicle crashes are caused by a car turning left in front of a motorcycle."
+  },
+  {
+    question: "In a quick stop on a surface with good traction, a rear-tire skid could result in:",
+    options: [
+      "A high-side crash",
+      "A low-side crash",
+      "A stoppie",
+      "A wheelie"
+    ],
+    correctIndex: 0,
+    explanation: "Releasing a misaligned locked rear wheel can violently snap the bike upright, causing a high-side."
+  },
+  {
+    question: "How does riding gear make a rider more comfortable?",
+    options: [
+      "Allows for good airflow when needed",
+      "Keeps the rider warm when needed",
+      "Keeps out rain, debris, and cold when needed",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "Proper gear regulates temperature and keeps you dry so you can stay focused."
+  },
+  {
+    question: "When using turn signals on a motorcycle, an important thing to remember is:",
+    options: [
+      "To remember to cancel it",
+      "Which direction to push the thumb",
+      "To remember to use it",
+      "Where the switch is located"
+    ],
+    correctIndex: 0,
+    explanation: "Most bikes don’t have self-canceling signals; forgetting them can mislead other drivers."
+  },
+  {
+    question: "When should a rider begin to turn their head for cornering?",
+    options: [
+      "At the beginning of the corner",
+      "Before they begin to lean",
+      "Halfway through the corner",
+      "At the end of the turn"
+    ],
+    correctIndex: 1,
+    explanation: "You turn your head and look through the turn before leaning the bike."
+  },
+  {
+    question: "Where should a rider look while swerving?",
+    options: [
+      "Straight ahead",
+      "At the obstacle they are trying to avoid",
+      "Through the escape path",
+      "At the ground"
+    ],
+    correctIndex: 2,
+    explanation: "If you look at the obstacle, you tend to steer into it. Look through the escape path instead."
+  },
+  {
+    question: "What is the quickest way to stop in a curve?",
+    options: [
+      "Gradually apply both brakes while staying leaned",
+      "Straighten the motorcycle and then brake hard in a straight line",
+      "Use only the front brake",
+      "Use only the rear brake"
+    ],
+    correctIndex: 1,
+    explanation: "Standing the bike up and then braking in a straight line gives the shortest stop."
+  },
+  {
+    question: "What should you do if you see a deer on the side of the road?",
+    options: [
+      "Slow down immediately",
+      "Steer away from the deer",
+      "Steer toward the deer",
+      "Honk your horn"
+    ],
+    correctIndex: 0,
+    explanation: "Deer are unpredictable. Slowing immediately reduces impact risk."
+  },
+  {
+    question: "Which safety standard designators might be found on motorcycle helmets?",
+    options: [
+      "DOT",
+      "Snell",
+      "ECE",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "DOT is the basic U.S. standard; Snell and ECE are additional common standards."
+  },
+  {
+    question: "Which type of helmet comes off more frequently than any other type in crashes?",
+    options: [
+      "Modular helmet",
+      "Three-quarter helmet",
+      "Half-shell helmet",
+      "Full-face helmet"
+    ],
+    correctIndex: 2,
+    explanation: "Half-shell helmets offer the least coverage and are more likely to come off in a crash."
+  },
+  {
+    question: "In a crash, the single biggest point of impact on a rider’s head is the:",
+    options: [
+      "Forehead",
+      "Chin",
+      "Temple",
+      "Back of the head"
+    ],
+    correctIndex: 1,
+    explanation: "NHTSA crash data shows about one-third of impacts are to the chin area."
+  },
+  {
+    question: "What is the primary purpose of the outer shell of a motorcycle helmet?",
+    options: [
+      "To provide comfort",
+      "To resist penetration and disperse energy",
+      "To make it fit well",
+      "To make a fashion statement"
+    ],
+    correctIndex: 1,
+    explanation: "The outer shell distributes impact force and resists penetration."
+  },
+  {
+    question: "At night or in poor visibility, your face shield or goggles should be:",
+    options: [
+      "Light tinted",
+      "Dark tinted",
+      "Yellow or clear",
+      "Removed"
+    ],
+    correctIndex: 2,
+    explanation: "Dark tints reduce what you can see; yellow or clear lenses are recommended in low visibility."
+  },
+  {
+    question: "The purpose of motorcycle gloves is to:",
+    options: [
+      "Provide protection against debris",
+      "Provide warmth",
+      "Provide grip",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "Good gloves combine warmth, abrasion resistance, and good grip."
+  },
+  {
+    question: "When crossing an obstacle, the rider should look:",
+    options: [
+      "Down at the road in front of the tire",
+      "At the obstacle",
+      "Straight ahead",
+      "Up at the sky"
+    ],
+    correctIndex: 2,
+    explanation: "Looking straight ahead helps the bike track straight over the obstacle."
+  },
+  {
+    question: "Right before front-tire contact with an obstacle, the rider should:",
+    options: [
+      "Roll on or blip the throttle",
+      "Roll off the throttle",
+      "Apply the front brake",
+      "Apply the rear brake"
+    ],
+    correctIndex: 0,
+    explanation: "A small throttle blip lightens the front end and helps the tire climb the obstacle."
+  },
+  {
+    question: "When riding in the rain, the rider should:",
+    options: [
+      "Predict less traction",
+      "Ride in the tracks of the vehicle ahead",
+      "Reduce speed and increase following distance",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "Rain reduces traction, especially early on; slow down and give yourself more space."
+  },
+  {
+    question: "Proper posture includes having the right wrist:",
+    options: [
+      "Higher than the knuckles",
+      "Flat or even with the knuckles",
+      "Lower than the knuckles",
+      "In any comfortable position"
+    ],
+    correctIndex: 1,
+    explanation: "A flat wrist angle lets you reach the brake lever easily without rolling on extra throttle."
+  },
+  {
+    question: "On a cruiser-type motorcycle, about how much of the total stopping power is provided by the front brake?",
+    options: [
+      "30%",
+      "50%",
+      "70%",
+      "100%"
+    ],
+    correctIndex: 2,
+    explanation: "On many cruisers, roughly 70% of braking force comes from the front brake."
+  },
+  {
+    question: "On a sport bike, approximately what percentage of total stopping power is provided by the rear brake?",
+    options: [
+      "10%",
+      "30%",
+      "50%",
+      "80%"
+    ],
+    correctIndex: 0,
+    explanation: "Sport bikes rely heavily on the front brake; the rear may provide only about 10%."
+  },
+  {
+    question: "The tachometer on a motorcycle shows:",
+    options: [
+      "Road speed in miles per hour",
+      "Gear position",
+      "Engine speed in rotations per minute",
+      "Miles driven"
+    ],
+    correctIndex: 2,
+    explanation: "The tachometer measures engine RPM."
+  },
+  {
+    question: "When riding in a group, the inexperienced rider is usually placed:",
+    options: [
+      "At the tail end of the group",
+      "In front of the group",
+      "In the middle of the group",
+      "Directly behind the leader"
+    ],
+    correctIndex: 3,
+    explanation: "The leader sets the pace based on the least experienced rider, typically just behind them."
+  },
+  {
+    question: "The most effective way to stop quickly is to:",
+    options: [
+      "Use both brakes simultaneously in a straight line",
+      "Use only the front brake",
+      "Use only the rear brake",
+      "Engine brake only"
+    ],
+    correctIndex: 0,
+    explanation: "Using both brakes in a straight line gives maximum braking power and stability."
+  },
+  {
+    question: "Bright, reflective colors should be worn:",
+    options: [
+      "Only at night",
+      "Only during the day",
+      "All the time when riding",
+      "Never"
+    ],
+    correctIndex: 2,
+    explanation: "High-visibility gear helps you be seen at all times."
+  },
+  {
+    question: "A good entry speed for a curve is:",
+    options: [
+      "A speed that lets you roll on or maintain throttle at the beginning of the curve",
+      "A speed that lets you brake through the curve",
+      "The fastest speed you can take the curve",
+      "The slowest speed possible"
+    ],
+    correctIndex: 0,
+    explanation: "Being able to gently roll on the throttle at the start of the curve stabilizes the bike."
+  },
+  {
+    question: "The best place to find the correct pressure for your tires is:",
+    options: [
+      "The sidewall of the tire",
+      "The motorcycle’s owner’s manual",
+      "The tire manufacturer’s website",
+      "The motorcycle dealer"
+    ],
+    correctIndex: 1,
+    explanation: "The owner’s manual lists the recommended pressures for your specific bike."
+  },
+  {
+    question: "Where is the most likely place for colliding with another vehicle?",
+    options: [
+      "A curve",
+      "A steep hill",
+      "An intersection",
+      "Nowhere in particular"
+    ],
+    correctIndex: 2,
+    explanation: "Most multi-vehicle crashes involving motorcycles happen at intersections."
+  },
+  {
+    question: "Where do most single-vehicle motorcycle crashes occur?",
+    options: [
+      "A curve",
+      "A steep hill",
+      "An intersection",
+      "A straight highway"
+    ],
+    correctIndex: 0,
+    explanation: "Single-vehicle motorcycle crashes usually occur in curves when riders misjudge speed."
+  },
+  {
+    question: "Stopping quickly in a curve requires the rider to:",
+    options: [
+      "Apply both brakes hard while leaned",
+      "Lean the opposite way while braking",
+      "Progressively apply both brakes until the bike is upright",
+      "Use only the rear brake"
+    ],
+    correctIndex: 2,
+    explanation: "You gradually straighten the bike while applying more brake as it comes upright."
+  },
+  {
+    question: "How many escape paths should a rider keep open in a collision trap?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "More than one"
+    ],
+    correctIndex: 3,
+    explanation: "You always want at least two options if one path suddenly closes."
+  },
+  {
+    question: "When riding in a crosswind, the rider may have to:",
+    options: [
+      "Use more handgrip pressure into the wind",
+      "Use the rear brake",
+      "Go faster",
+      "Avoid carrying a passenger"
+    ],
+    correctIndex: 0,
+    explanation: "You may need to steer slightly into the wind to maintain your line."
+  },
+  {
+    question: "Why does a motorcycle have an engine cutoff switch?",
+    options: [
+      "As an emergency backup to the key",
+      "To offer another way to turn off the engine",
+      "So the rider does not have to take hands off the grips to shut off the engine",
+      "To ensure the engine is really off"
+    ],
+    correctIndex: 2,
+    explanation: "The cutoff switch lets you shut the engine down without letting go of the handlebars."
+  },
+  {
+    question: "What does the clutch lever do?",
+    options: [
+      "Shift gears",
+      "Pop a wheelie",
+      "Stop the motorcycle",
+      "Remove power from the rear wheel"
+    ],
+    correctIndex: 3,
+    explanation: "Pulling the clutch disengages engine power from the rear wheel."
+  },
+  {
+    question: "Which gear should the rider be in when coming to a stop?",
+    options: [
+      "First",
+      "Second",
+      "Neutral",
+      "Any gear"
+    ],
+    correctIndex: 0,
+    explanation: "Being in first gear lets you move off quickly if needed."
+  },
+  {
+    question: "What is engine braking?",
+    options: [
+      "Braking while the engine is on",
+      "Using only the rear brake",
+      "Using only the front brake",
+      "Using the engine to slow you by downshifting and easing out the clutch"
+    ],
+    correctIndex: 3,
+    explanation: "Downshifting and letting the clutch out uses engine resistance to slow the bike."
+  },
+  {
+    question: "Which type of helmet provides the most protection in a crash?",
+    options: [
+      "Half-shell helmet",
+      "Three-quarter helmet",
+      "Modular (flip-up) helmet",
+      "Full-face helmet"
+    ],
+    correctIndex: 3,
+    explanation: "A full-face helmet offers the most coverage, including chin and face."
+  },
+  {
+    question: "When should you check your motorcycle’s tire pressure?",
+    options: [
+      "Every time before you ride",
+      "Once a week",
+      "Once a month",
+      "Only when it looks low"
+    ],
+    correctIndex: 0,
+    explanation: "Tire pressure and tread should be checked before every ride."
+  },
+  {
+    question: "If you accidentally lock the front wheel when braking, you should:",
+    options: [
+      "Keep it locked",
+      "Release and reapply with less pressure",
+      "Apply more rear brake",
+      "Accelerate"
+    ],
+    correctIndex: 1,
+    explanation: "Release immediately and re-apply gently to avoid a low-side crash."
+  },
+  {
+    question: "Motorcycle helmets should be:",
+    options: [
+      "OSHA compliant",
+      "FDA compliant",
+      "DOT compliant",
+      "NFPA compliant"
+    ],
+    correctIndex: 2,
+    explanation: "In the U.S., helmets must at least meet DOT standards."
+  },
+  {
+    question: "Counter-weighting is used:",
+    options: [
+      "In low-speed tight turns",
+      "In high-speed turns",
+      "In every turn",
+      "When braking"
+    ],
+    correctIndex: 0,
+    explanation: "At low speed, you turn the bars into the turn and lean your body to the outside."
+  },
+  {
+    question: "Why is it important to do a head check when changing lanes?",
+    options: [
+      "It shows other drivers your intentions",
+      "Someone might be in your blind spot",
+      "It helps the motorcycle lean",
+      "It slows you down"
+    ],
+    correctIndex: 1,
+    explanation: "Mirrors don’t show everything—head checks catch what’s in the blind spot."
+  },
+  {
+    question: "The friction zone on a motorcycle is:",
+    options: [
+      "Where the motor starts putting power to the rear wheel through the clutch",
+      "When the rear wheel spins",
+      "Sliding on its side",
+      "Popping a wheelie"
+    ],
+    correctIndex: 0,
+    explanation: "It’s the partial-engagement area of the clutch where the bike just begins to move."
+  },
+  {
+    question: "Why should you park your motorcycle in first gear?",
+    options: [
+      "To keep it from being stolen",
+      "To keep it from rolling",
+      "So it is easier to start",
+      "All of the above"
+    ],
+    correctIndex: 1,
+    explanation: "Leaving it in first helps keep the bike from rolling on an incline."
+  },
+  {
+    question: "What is the rider’s torso position during a swerve?",
+    options: [
+      "Upright, independent of motorcycle lean",
+      "Leaning in the direction of the swerve",
+      "Leaning away from the swerve",
+      "Leaning forward over the bars"
+    ],
+    correctIndex: 0,
+    explanation: "In a proper swerve the bike moves under you while your torso stays mostly upright."
+  },
+  {
+    question: "Why should you rise up slightly off the seat when crossing over an obstacle?",
+    options: [
+      "To keep the obstacle from moving",
+      "To see better",
+      "To use the legs and knees as shock absorbers",
+      "To maintain momentum"
+    ],
+    correctIndex: 2,
+    explanation: "Let your legs absorb some of the impact so the bike and your spine take less."
+  },
+  {
+    question: "Why is riding a motorcycle more dangerous than driving a car?",
+    options: [
+      "Less visibility",
+      "Less protection",
+      "Less stability",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "You’re smaller, exposed, and on two wheels—crash risk and severity are higher."
+  },
+  {
+    question: "In seconds, what following distance generally provides enough time to stop or swerve in an urgent situation (under about 70 mph)?",
+    options: [
+      "2 seconds",
+      "4 seconds",
+      "12 seconds",
+      "20 seconds"
+    ],
+    correctIndex: 1,
+    explanation: "A 4-second following distance gives enough time to react and perform an emergency maneuver."
+  },
+  {
     question: "What are the requirements for wearing a helmet?",
     options: [
       "Passengers only are required to wear helmets.",
