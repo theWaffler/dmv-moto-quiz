@@ -2258,7 +2258,7 @@ const NEW_QUESTIONS = [
       "You must travel at least $45$ mph at all times"
     ],
     correctIndex: 1,
-    explanation: "Motorcycles towing trailers may not exceed $55$ mph and must remain in the right lane (or right two lanes on a four-lane highway) and are not allowed in carpool lanes."
+    explanation: "Motorcycles towing trailers may not exceed 55 mph and must remain in the right lane (or right two lanes on a four-lane highway) and are not allowed in carpool lanes."
   },
 
   // 14. Group riding (new details)
