@@ -2730,7 +2730,7 @@ const MORE_LEGAL_QUESTIONS = [
 ALL_QUESTIONS.push(...MORE_LEGAL_QUESTIONS);
 
 // Merge without removing anything
-//ALL_QUESTIONS.push(...NEW_QUESTIONS);
+ALL_QUESTIONS.push(...NEW_QUESTIONS);
 
 // =======================================
 // STATE VARIABLES
