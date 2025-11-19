@@ -1635,9 +1635,751 @@ const ALL_QUESTIONS = [
     ],
     correctIndex: 2,
     explanation: "Slowing first and then accelerating helps you avoid the dog’s path."
-  }
-  
+  } 
 ];
+
+// Your existing ALL_QUESTIONS stays exactly as you have it above this line.
+
+const NEW_QUESTIONS = [
+  // 1. Vehicle types / definitions
+  {
+    question: "According to California law, which of the following best defines a motorcycle?",
+    options: [
+      "Any two-wheeled vehicle capable of more than $20$ mph",
+      "A motor vehicle with a seat or saddle for the rider, designed to travel on not more than three wheels",
+      "Any two- or three-wheeled vehicle with pedals",
+      "Any motor-driven vehicle that is not a car or truck"
+    ],
+    correctIndex: 1,
+    explanation: "A motorcycle is defined as a motor vehicle with a seat or saddle for the rider, designed to travel on not more than three wheels."
+  },
+  {
+    question: "A motor-driven cycle is defined as a motorcycle with:",
+    options: [
+      "An engine size of at least $150$ cc",
+      "An engine size of less than $150$ cc",
+      "An electric motor only",
+      "No more than three wheels"
+    ],
+    correctIndex: 1,
+    explanation: "A motor-driven cycle is a motorcycle with a motor size of less than $150$ cc."
+  },
+  {
+    question: "A motorized bicycle or moped is limited to a top speed of no more than:",
+    options: [
+      "$20$ mph on level ground",
+      "$28$ mph on level ground",
+      "$30$ mph on level ground",
+      "$35$ mph on level ground"
+    ],
+    correctIndex: 2,
+    explanation: "A motorized bicycle or moped is a two- or three-wheeled device capable of no more than $30$ mph on level ground."
+  },
+  {
+    question: "Which of the following is true about Class 3 electric bicycles in California?",
+    options: [
+      "They may be ridden by anyone with a Class C license",
+      "They may be operated by riders $14$ years old or older",
+      "The operator must be at least $16$ years old and must wear a bicycle safety helmet",
+      "Passengers are allowed if they are wearing helmets"
+    ],
+    correctIndex: 2,
+    explanation: "Class 3 electric bicycle operators must be at least $16$ years old and must wear a bicycle safety helmet; they may not carry passengers."
+  },
+  {
+    question: "A motorized scooter may be operated in California with:",
+    options: [
+      "Only a Class M1 license",
+      "Only a Class M2 license",
+      "Any valid California driver license of any class",
+      "No license, but a permit is required"
+    ],
+    correctIndex: 2,
+    explanation: "A person holding a valid California driver license of any class may operate a motorized scooter."
+  },
+
+  // 2. License classes / permits / CMSP
+  {
+    question: "A Class M1 license allows you to operate:",
+    options: [
+      "Only motorized bicycles and scooters",
+      "Any two-wheel motorcycle, motor-driven cycle, or motorized scooter and all vehicles allowed with an M2",
+      "Only three-wheel motorcycles and sidecar rigs",
+      "Only motorcycles with engines $150$ cc or larger"
+    ],
+    correctIndex: 1,
+    explanation: "Class M1 authorizes any two-wheel motorcycle, motor-driven cycle, or motorized scooter, plus all vehicles allowed under Class M2."
+  },
+  {
+    question: "A Class M2 license allows you to operate:",
+    options: [
+      "Any two-wheel motorcycle",
+      "Only three-wheel motorcycles",
+      "Any motorized bicycle, moped, or motorized scooter",
+      "Only motorcycles with engine sizes under $150$ cc"
+    ],
+    correctIndex: 2,
+    explanation: "Class M2 is limited to motorized bicycles, mopeds, and motorized scooters."
+  },
+  {
+    question: "Which of the following may be operated with only a Class C license (no M1/M2)?",
+    options: [
+      "A two-wheel motorcycle",
+      "A motorcycle with a sidecar attached",
+      "A motor-driven cycle on any freeway",
+      "Any moped on any roadway"
+    ],
+    correctIndex: 1,
+    explanation: "Class C licensees may operate a motorcycle with a sidecar attached, a three-wheel motorcycle, or a motorized scooter."
+  },
+  {
+    question: "Which of the following is a restriction on a Class M1/M2 instruction permit?",
+    options: [
+      "You may only ride during daylight on freeways",
+      "You may not carry passengers, ride on freeways, or ride at night",
+      "You may ride only in residential areas",
+      "You may ride only under direct supervision of a licensed instructor"
+    ],
+    correctIndex: 1,
+    explanation: "An M1/M2 permit does not allow carrying passengers, freeway riding, or nighttime riding."
+  },
+  {
+    question: "A motorcycle applicant under $21$ years old must:",
+    options: [
+      "Take only a written test to get a license",
+      "Complete a California Motorcyclist Safety Program (CMSP) training course before receiving a motorcycle instruction permit",
+      "Pass only the skills test, not the knowledge test",
+      "Show proof of prior out-of-state motorcycle experience"
+    ],
+    correctIndex: 1,
+    explanation: "Under $21$, you must complete an approved CMSP course and receive a DL 389 before DMV will issue a motorcycle instruction permit."
+  },
+  {
+    question: "The Certificate of Completion of Motorcycle Training (DL 389) is valid for:",
+    options: [
+      "6 months from the issue date",
+      "12 months from the issue date",
+      "Until the rider turns $21$",
+      "It does not expire"
+    ],
+    correctIndex: 1,
+    explanation: "The DL 389 is valid for $12$ months from the issue date."
+  },
+  {
+    question: "Using the California Motorcycle Handbook or electronic devices during the knowledge test is:",
+    options: [
+      "Allowed if you finish within the time limit",
+      "Allowed only if you are over $21$",
+      "Strictly prohibited and considered cheating",
+      "Allowed if the examiner says it is okay"
+    ],
+    correctIndex: 2,
+    explanation: "Using any testing aids, including handbooks or electronic devices, is considered cheating and will result in test failure and possible action against your driving privilege."
+  },
+
+  // 3. Skills test details
+  {
+    question: "Which of the following is part of the motorcycle skills test pre-trip inspection?",
+    options: [
+      "Checking your insurance card and registration",
+      "Identifying controls such as the starter, kill switch, clutch, and horn",
+      "Demonstrating how to change the oil",
+      "Proving you can ride for at least 10 minutes"
+    ],
+    correctIndex: 1,
+    explanation: "Before the skills exercises, you must identify key controls on the motorcycle such as the starter, kill switch, clutch, throttle, gear selector, and horn."
+  },
+  {
+    question: "During the serpentine ride exercise in the skills test, you must:",
+    options: [
+      "Ride a straight line between two cones",
+      "Weave through five cones and then begin the circle ride",
+      "Perform a U-turn between the cones",
+      "Stop at each cone and then proceed"
+    ],
+    correctIndex: 1,
+    explanation: "In the serpentine exercise you weave through a row of five cones, beginning on the right side of the first cone, and then transition directly into the circle ride."
+  },
+  {
+    question: "In the slow ride portion of the skills test, the rider is expected to:",
+    options: [
+      "Ride as fast as possible in a straight line",
+      "Ride slowly between two parallel lines without leaving the tracking path",
+      "Ride in circles without using the brakes",
+      "Perform an emergency stop inside a box"
+    ],
+    correctIndex: 1,
+    explanation: "The slow ride requires you to ride slowly between two parallel lines, keeping the front tire within the tracking path."
+  },
+  {
+    question: "Which skills test exercise requires you to shift up and down through the gears and perform a U-turn?",
+    options: [
+      "Serpentine ride",
+      "Circle ride",
+      "Gear shift ride",
+      "Slow ride"
+    ],
+    correctIndex: 2,
+    explanation: "The gear shift ride involves shifting up and down, making a U-turn, and stopping smoothly at the starting point."
+  },
+
+  // 4. Gear / protective equipment
+  {
+    question: "Which statement about DOT certification on a motorcycle helmet is correct?",
+    options: [
+      "The DOT label can be a removable sticker applied by the seller",
+      "The DOT label must be applied by the manufacturer and should not be easily removed",
+      "Any helmet sold in a motorcycle shop is automatically DOT compliant",
+      "Only full-face helmets are allowed to have DOT labels"
+    ],
+    correctIndex: 1,
+    explanation: "A DOT-compliant helmet must have manufacturer-applied DOT lettering on the back that is not just a removable sticker."
+  },
+  {
+    question: "Which of the following is a warning sign of a non-DOT, novelty-type helmet?",
+    options: [
+      "Thick, energy-absorbing liner",
+      "Heavier overall weight",
+      "Very thin liners and padding with minimal coverage",
+      "Presence of a face shield"
+    ],
+    correctIndex: 2,
+    explanation: "Novelty helmets often have very thin liners and padding, providing little real protection in a collision."
+  },
+  {
+    question: "Which is true about tinted eye protection or tinted face shields?",
+    options: [
+      "They are recommended at night for better contrast",
+      "They should not be worn at night or in low-light conditions",
+      "They are required whenever it rains",
+      "They may only be worn by passengers"
+    ],
+    correctIndex: 1,
+    explanation: "Tinted eye protection reduces available light and should not be used at night or when little light is available."
+  },
+  {
+    question: "California law allows the use of earplugs while riding only if:",
+    options: [
+      "They completely block all outside sound",
+      "They are used in both ears, regardless of design",
+      "They are specifically designed to reduce harmful noise but still allow you to hear sirens and horns",
+      "They are worn in only one ear"
+    ],
+    correctIndex: 2,
+    explanation: "Earplugs or molds must be designed to reduce injurious noise and must not prevent you from hearing sirens or horns."
+  },
+  {
+    question: "Which footwear is most appropriate for motorcycle riding?",
+    options: [
+      "Flip flops",
+      "Over-the-ankle boots with slip-resistant soles",
+      "High heels",
+      "Barefoot riding to feel the pegs"
+    ],
+    correctIndex: 1,
+    explanation: "Over-the-ankle boots with durable, slip-resistant soles provide protection and ankle support."
+  },
+  {
+    question: "Why is wearing a long-sleeve jacket, long pants, boots, and gloves recommended even in warm weather?",
+    options: [
+      "To meet a legal requirement",
+      "To prevent dehydration and sun/wind burn while still providing protection in a fall",
+      "To keep the motorcycle cleaner",
+      "To avoid getting a tan"
+    ],
+    correctIndex: 1,
+    explanation: "Protective clothing helps reduce dehydration, windburn, and injury in a crash, even in warm weather."
+  },
+
+  // 5. Pre-ride inspection / controls
+  {
+    question: "Before every ride, you should check all of the following EXCEPT:",
+    options: [
+      "Tire pressure and tread",
+      "Oil and fluid levels",
+      "Headlights, taillight, and brake light",
+      "Radio volume"
+    ],
+    correctIndex: 3,
+    explanation: "Tires, fluids, and lights must be checked before every ride; radio volume is not a safety item described in the handbook."
+  },
+  {
+    question: "In addition to pre-ride checks, which items should be checked at least weekly?",
+    options: [
+      "Wheels, cables, fasteners, and fluid levels",
+      "Only tire pressure",
+      "Only the horn and turn signals",
+      "Only chain lubrication"
+    ],
+    correctIndex: 0,
+    explanation: "The handbook recommends checking wheels, cables, fasteners, and fluid levels at least once a week."
+  },
+  {
+    question: "When riding a motorcycle that is new or unfamiliar to you, you should:",
+    options: [
+      "Ride at normal speeds to get used to it quickly",
+      "Test your limits on a busy street",
+      "Familiarize yourself with the controls in a controlled area before riding in traffic",
+      "Assume all motorcycles handle the same"
+    ],
+    correctIndex: 2,
+    explanation: "You should practice on an unfamiliar motorcycle in a controlled area to learn its controls and handling before entering traffic."
+  },
+
+  // 6. Body position / control (new angles)
+  {
+    question: "To help maintain balance in turns, where should you keep your knees?",
+    options: [
+      "Away from the tank to allow airflow",
+      "Pressed firmly against the gas tank",
+      "Pointing outward for cooling",
+      "Hanging loosely off the bike"
+    ],
+    correctIndex: 1,
+    explanation: "Keeping your knees against the tank improves stability and balance while turning."
+  },
+  {
+    question: "When riding, why should you avoid pointing your toes downward?",
+    options: [
+      "It reduces blood flow to your feet",
+      "It increases drag and fuel consumption",
+      "Your toes may get caught between the road and the footrests",
+      "It makes shifting impossible"
+    ],
+    correctIndex: 2,
+    explanation: "Pointing your toes downward can cause them to catch on the road surface or footrests, risking loss of control."
+  },
+  {
+    question: "When is it best to change gears while approaching a turn?",
+    options: [
+      "After you enter the turn",
+      "At the sharpest part of the turn",
+      "Before you begin the turn",
+      "Only after exiting the turn"
+    ],
+    correctIndex: 2,
+    explanation: "Shifting before a turn keeps the motorcycle stable and avoids sudden power changes while leaned over."
+  },
+
+  // 7. Following distance
+  {
+    question: "The handbook’s basic following-distance rule for normal conditions is at least:",
+    options: [
+      "A one-second gap",
+      "A two-second gap",
+      "A four-second gap",
+      "Whatever feels comfortable"
+    ],
+    correctIndex: 1,
+    explanation: "Under normal conditions, you should maintain at least a two-second following distance behind another vehicle."
+  },
+
+  // 8. Lane use / HOV / toll lanes / lane splitting specifics
+  {
+    question: "Motorcyclists may use carpool/HOV lanes in California:",
+    options: [
+      "Only when carrying a passenger",
+      "Only during commuting hours",
+      "Unless signs specifically prohibit motorcycles",
+      "Only with a special motorcycle decal"
+    ],
+    correctIndex: 2,
+    explanation: "Motorcycles are allowed in HOV lanes unless signs specifically prohibit them."
+  },
+  {
+    question: "When using a toll transponder or electronic payment device on a motorcycle, you may NOT place it:",
+    options: [
+      "In your pocket",
+      "In a storage compartment on the motorcycle",
+      "On the motorcycle’s windshield",
+      "Dangling loosely from your wrist"
+    ],
+    correctIndex: 3,
+    explanation: "A transponder must be secured where the toll reader can detect it, not dangling from your wrist."
+  },
+  {
+    question: "Why is lane splitting (riding between lanes of stopped or slower-moving traffic) considered risky?",
+    options: [
+      "It is always illegal in California",
+      "Vehicles may change lanes or open doors suddenly into your path",
+      "It saves too much time and encourages speeding",
+      "It only affects other drivers, not the rider"
+    ],
+    correctIndex: 1,
+    explanation: "Lane splitting leaves you vulnerable to vehicles changing lanes, opening doors, or extending hands unexpectedly."
+  },
+
+  // 9. SEE strategy / intersections
+  {
+    question: "In the SEE strategy, what does the 'S' stand for?",
+    options: [
+      "Stop",
+      "Signal",
+      "Search",
+      "Secure"
+    ],
+    correctIndex: 2,
+    explanation: "SEE stands for Search, Evaluate, and Execute."
+  },
+  {
+    question: "When evaluating hazards using SEE, you should focus on:",
+    options: [
+      "The color and size of nearby vehicles",
+      "The speed, distance, and direction of potential hazards",
+      "Only hazards directly in front of you",
+      "Only road surface conditions"
+    ],
+    correctIndex: 1,
+    explanation: "To predict how a hazard may affect you, you must know its speed, distance, and direction."
+  },
+  {
+    question: "At a large intersection where a car can turn left across your path, you should:",
+    options: [
+      "Assume the driver will wait because they see you",
+      "Rely on eye contact to guarantee they will yield",
+      "Assume the vehicle may enter your path and be prepared to slow or take evasive action",
+      "Speed up to get through before the car moves"
+    ],
+    correctIndex: 2,
+    explanation: "Never rely on eye contact. If a vehicle can enter your path, assume it will and be ready to act."
+  },
+  {
+    question: "When approaching a blind intersection with parked vehicles blocking your view, you should first:",
+    options: [
+      "Ride close to the parked cars to see better",
+      "Move to the lane position that brings you into cross traffic’s field of vision as early as possible",
+      "Speed up to clear the intersection quickly",
+      "Ride in the center of the lane without changing position"
+    ],
+    correctIndex: 1,
+    explanation: "Moving to a lane position that makes you visible sooner (often left portion of the lane) increases your chance of being seen at a blind intersection."
+  },
+  {
+    question: "At a blind intersection with a stop sign, after stopping at the stop line you should:",
+    options: [
+      "Accelerate quickly into the intersection",
+      "Edge forward and stop again where you can see, keeping your front wheel out of the cross lane",
+      "Make a U-turn to avoid the intersection",
+      "Sound your horn and proceed without looking again"
+    ],
+    correctIndex: 1,
+    explanation: "You should stop at the stop line, then edge forward and stop again where you can see, keeping your front wheel out of the cross traffic lane."
+  },
+
+  // 10. Passing parked vehicles / parking / visibility
+  {
+    question: "When passing a line of parked cars, the safest lane position is usually:",
+    options: [
+      "As close as possible to the parked cars",
+      "In the left portion of your lane away from parked vehicles",
+      "In the right portion of your lane near the curb",
+      "Directly in the center of the lane close to the cars"
+    ],
+    correctIndex: 1,
+    explanation: "Staying toward the left portion of your lane helps you avoid doors opening and people stepping out from between vehicles."
+  },
+  {
+    question: "When parking a motorcycle at the roadside next to a curb, you should:",
+    options: [
+      "Park parallel to the curb, in the direction of traffic",
+      "Park at a $45$ to $90$ degree angle with a wheel or fender touching the curb",
+      "Park facing against traffic for a quicker exit",
+      "Park on the sidewalk if space is limited"
+    ],
+    correctIndex: 1,
+    explanation: "The handbook recommends parking at a $45$ to $90$ degree angle to the curb with a wheel or fender touching the curb."
+  },
+
+  // 11. Dangerous surfaces / obstacles / tracks / gratings
+  {
+    question: "If you must ride over an uneven surface or small obstacle, you should:",
+    options: [
+      "Speed up just before the obstacle and sit down firmly",
+      "Slow as much as possible, straighten the motorcycle, rise slightly off the seat, and roll on the throttle just before contact",
+      "Apply the front brake firmly as the front wheel hits",
+      "Look down at the obstacle until you cross it"
+    ],
+    correctIndex: 1,
+    explanation: "Slow down, keep the motorcycle straight, rise slightly to absorb the shock, and roll on a little throttle to help the front wheel clear the obstacle."
+  },
+  {
+    question: "On very slippery surfaces like ice or packed snow, you should:",
+    options: [
+      "Use only the front brake",
+      "Ride at normal speeds to keep balance",
+      "Keep the motorcycle upright and travel at a walking pace, possibly letting your feet skim the surface",
+      "Lean the motorcycle heavily into turns"
+    ],
+    correctIndex: 2,
+    explanation: "On extremely slippery surfaces, keep the motorcycle upright, travel very slowly, and if necessary let your feet skim the surface for balance."
+  },
+  {
+    question: "When crossing railroad tracks that run parallel to your lane, you should:",
+    options: [
+      "Cross them at an angle of at least $45^\\circ$",
+      "Ride directly along the tracks",
+      "Stop and walk the motorcycle over the tracks",
+      "Cross at as shallow an angle as possible"
+    ],
+    correctIndex: 0,
+    explanation: "Move away from the tracks and then cross at an angle of at least $45^\\circ$ to avoid having your tires caught."
+  },
+  {
+    question: "When riding over rain grooves or metal bridge gratings, your motorcycle may:",
+    options: [
+      "Immediately lose all traction",
+      "Weave or wander slightly, which usually is not hazardous",
+      "Stop suddenly",
+      "High-side without warning"
+    ],
+    correctIndex: 1,
+    explanation: "Grooves and gratings can cause a wandering feeling; stay relaxed, maintain a steady speed, and ride straight across."
+  },
+
+  // 12. Mechanical problems
+  {
+    question: "If a tire suddenly goes flat while you are riding, your first reaction should be to:",
+    options: [
+      "Apply the brakes firmly and immediately",
+      "Grip the handlebars firmly, ease off the throttle, and keep a straight course",
+      "Shift rapidly to a lower gear",
+      "Swerve to the shoulder"
+    ],
+    correctIndex: 1,
+    explanation: "Hold the handlebars firmly, ease off the throttle, and keep the bike straight, then brake gradually with the tire that is not flat."
+  },
+  {
+    question: "A stuck throttle should be handled by:",
+    options: [
+      "Shutting off the ignition key only",
+      "Braking hard with both brakes",
+      "Immediately operating the engine cut-off switch and pulling in the clutch",
+      "Downshifting repeatedly"
+    ],
+    correctIndex: 2,
+    explanation: "If the throttle will not free, immediately hit the engine cut-off switch and pull in the clutch to remove power to the rear wheel."
+  },
+  {
+    question: "A motorcycle wobble (front wheel and handlebars shaking side to side) is most often caused by:",
+    options: [
+      "Using too much front brake",
+      "Improper loading, unsuitable accessories, or incorrect tire pressure",
+      "Riding too slowly",
+      "Use of the engine cut-off switch"
+    ],
+    correctIndex: 1,
+    explanation: "Most wobbles are traced to improper loading, incorrect tire pressure, or unsuitable accessories."
+  },
+  {
+    question: "If your motorcycle develops a wobble, you should:",
+    options: [
+      "Accelerate hard to ride out of it",
+      "Fight the handlebars to stop the movement",
+      "Grip the bars firmly, roll off the throttle gradually, and avoid braking",
+      "Apply both brakes immediately"
+    ],
+    correctIndex: 2,
+    explanation: "Do not fight the wobble or brake; hold the bars firmly, gradually roll off the throttle, move your weight forward, and leave the road as soon as you can safely."
+  },
+  {
+    question: "If your drive chain or belt breaks while riding, you should:",
+    options: [
+      "Immediately accelerate",
+      "Pull in the clutch and brake to a stop",
+      "Turn off the headlight and coast",
+      "Continue riding until the next exit"
+    ],
+    correctIndex: 1,
+    explanation: "A broken chain or belt can lock the rear wheel; pull in the clutch and brake to a safe stop."
+  },
+  {
+    question: "Engine seizure (locking up) is usually caused by:",
+    options: [
+      "Using too much front brake",
+      "Using the wrong fuel",
+      "Low or no engine oil causing overheating",
+      "A dirty air filter"
+    ],
+    correctIndex: 2,
+    explanation: "When an engine is low on oil, internal parts overheat and can seize, locking the rear wheel."
+  },
+
+  // 13. Passengers / child passengers / loads / towing
+  {
+    question: "Before carrying a passenger, your motorcycle must have:",
+    options: [
+      "Only a larger fuel tank",
+      "A seat large enough for two and footrests for the passenger",
+      "Special handlebars",
+      "A windshield"
+    ],
+    correctIndex: 1,
+    explanation: "A proper passenger seat and footrests are required so the passenger can sit securely with firm footing."
+  },
+  {
+    question: "Which instruction should you give a passenger BEFORE starting the ride?",
+    options: [
+      "Keep your feet down at stops to help balance",
+      "Lean opposite to every turn",
+      "Keep both feet on the footrests at all times, even when stopped",
+      "Avoid holding onto the rider"
+    ],
+    correctIndex: 2,
+    explanation: "Passengers should keep their feet on the footrests at all times, even when stopped, to avoid upsetting balance."
+  },
+  {
+    question: "When riding with a passenger, you should:",
+    options: [
+      "Accelerate and brake as you normally would",
+      "Ride a little slower and begin slowing sooner for stops",
+      "Take curves faster because of the extra weight",
+      "Ride closer to other vehicles"
+    ],
+    correctIndex: 1,
+    explanation: "Extra weight makes the motorcycle respond more slowly, so ride slightly slower and start slowing earlier."
+  },
+  {
+    question: "When carrying a load in saddlebags, you should:",
+    options: [
+      "Load one side heavier to help balance",
+      "Distribute the weight as evenly as possible between both sides",
+      "Place all heavy items on the right side",
+      "Place all light items at the bottom and heavy items on top"
+    ],
+    correctIndex: 1,
+    explanation: "Uneven loads can cause the motorcycle to drift; distribute weight roughly equally in both saddlebags."
+  },
+  {
+    question: "When towing a trailer with a motorcycle in California, which is true?",
+    options: [
+      "You may use carpool lanes if you maintain the speed limit",
+      "You must not exceed $55$ mph and must stay in the right lane (or right two lanes on a four-lane highway)",
+      "You may travel in any lane as long as you signal",
+      "You must travel at least $45$ mph at all times"
+    ],
+    correctIndex: 1,
+    explanation: "Motorcycles towing trailers may not exceed $55$ mph and must remain in the right lane (or right two lanes on a four-lane highway) and are not allowed in carpool lanes."
+  },
+
+  // 14. Group riding (new details)
+  {
+    question: "For safety, a motorcycle group should generally be limited to:",
+    options: [
+      "No more than two riders",
+      "About four or five riders per group before splitting into smaller groups",
+      "At least ten riders",
+      "As many riders as possible in one group"
+    ],
+    correctIndex: 1,
+    explanation: "Groups larger than four or five riders should be split into smaller groups to make it easier to stay together and for others to pass safely."
+  },
+  {
+    question: "In a proper staggered formation, the second rider should be positioned:",
+    options: [
+      "Directly beside the leader in the same lane",
+      "One second behind the leader in the right portion of the lane",
+      "Two seconds behind the leader in the left portion of the lane",
+      "Directly behind the leader in the center of the lane"
+    ],
+    correctIndex: 1,
+    explanation: "In a staggered formation the leader rides in the left portion of the lane; the second rider stays about one second behind in the right portion."
+  },
+  {
+    question: "When should a group of riders switch from staggered to single-file formation?",
+    options: [
+      "On straightaways",
+      "When riding curves, turning, or entering/leaving a highway",
+      "In city traffic only",
+      "Never; staggered is always best"
+    ],
+    correctIndex: 1,
+    explanation: "Single-file formation is recommended in curves, when turning, and when entering or leaving highways."
+  },
+
+  // 15. Alcohol / fatigue / law
+  {
+    question: "In California, it is illegal for a person under 21 years old to ride with a BAC of:",
+    options: [
+      "0.08% or higher",
+      "0.04% or higher",
+      "0.01% or higher",
+      "Any amount as long as they can ride safely"
+    ],
+    correctIndex: 2,
+    explanation: "California has zero tolerance for under-21 riders: a BAC of $0.01\\%$ or more is illegal."
+  },
+  {
+    question: "Which factor does NOT affect how quickly alcohol raises your blood alcohol concentration (BAC)?",
+    options: [
+      "How fast you drink",
+      "Your body weight",
+      "Whether you are tired or sick",
+      "The color of your motorcycle"
+    ],
+    correctIndex: 3,
+    explanation: "BAC is affected by how much and how fast you drink and by factors like weight, fatigue, and health—not by your motorcycle’s color."
+  },
+  {
+    question: "Which is a recommended way to reduce fatigue on long rides?",
+    options: [
+      "Riding more than eight hours without stopping",
+      "Taking frequent rest breaks at least every two hours",
+      "Drinking alcohol to relax",
+      "Using stimulants to stay awake"
+    ],
+    correctIndex: 1,
+    explanation: "The handbook recommends frequent rest breaks—at least every two hours—and limiting total daily riding time."
+  },
+
+  // 16. Insurance / evading officers / TREAD LIGHTLY
+  {
+    question: "You must report a traffic collision to DMV using form SR1 if:",
+    options: [
+      "There is more than $1{,}000$ in property damage or anyone is injured, no matter how slightly",
+      "Only if someone is killed",
+      "Only if police respond to the scene",
+      "Only if you are at fault"
+    ],
+    correctIndex: 0,
+    explanation: "Any collision with more than $1{,}000$ in damage or any injury must be reported to DMV within 10 days using form SR1."
+  },
+  {
+    question: "Evading a peace officer while riding a motorcycle is:",
+    options: [
+      "A minor traffic infraction",
+      "A misdemeanor punishable by up to one year in county jail",
+      "Legal if you believe you are being harassed",
+      "Only illegal if you exceed the speed limit"
+    ],
+    correctIndex: 1,
+    explanation: "Willfully fleeing or attempting to evade a peace officer is a misdemeanor punishable by up to a year in county jail, with more severe penalties if injuries or death occur."
+  },
+  {
+    question: "The TREAD LIGHTLY! guidelines mainly apply to:",
+    options: [
+      "Riding in heavy city traffic",
+      "Off-highway and public land riding to minimize environmental damage",
+      "Using HOV lanes",
+      "Riding in carpool lanes"
+    ],
+    correctIndex: 1,
+    explanation: "TREAD LIGHTLY! encourages responsible off-highway riding, minimizing damage to public lands and wildlife."
+  },
+  {
+    question: "Which action is consistent with TREAD LIGHTLY! principles?",
+    options: [
+      "Cutting new trails on steep hillsides",
+      "Driving across meadows and stream banks to save time",
+      "Avoiding soft, wet trails that can be easily torn up",
+      "Ignoring gate closures"
+    ],
+    correctIndex: 2,
+    explanation: "Riders are urged to stay off soft, wet roads and trails that are easily damaged and to respect closures and existing trails."
+  }
+];
+
+// Merge without removing anything
+ALL_QUESTIONS.push(...NEW_QUESTIONS);
 
 // =======================================
 // STATE VARIABLES
