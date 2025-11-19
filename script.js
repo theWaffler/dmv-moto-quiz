@@ -2378,8 +2378,359 @@ const NEW_QUESTIONS = [
   }
 ];
 
+const MORE_LEGAL_QUESTIONS = [
+  // LICENSE CLASSES / AGE RULES / PERMITS
+
+  {
+    question: "A rider who is 15½ to 17 years old and wants an M1 license must:",
+    options: [
+      "Pass the motorcycle skills test only",
+      "Submit a DL 389 and proof of driver education and behind‑the‑wheel training or already hold a Class C license, and pass both driver and motorcycle knowledge tests",
+      "Take only the motorcycle knowledge test",
+      "Complete only a CMSP course with no DMV testing"
+    ],
+    correctIndex: 1,
+    explanation: "Minors 15½–17 must submit a DL 389, show completion of driver education and driver training (or hold a Class C), and pass both the driver and motorcycle knowledge tests."
+  },
+  {
+    question: "Applicants 18 to 20 years old who want an M1 or M2 license must:",
+    options: [
+      "Submit a DL 389 and pass both the driver and motorcycle knowledge tests",
+      "Take only the motorcycle skills test",
+      "Complete driver education but not motorcycle training",
+      "Pass the motorcycle skills test only; no written test is required"
+    ],
+    correctIndex: 0,
+    explanation: "Riders 18–20 must submit a DL 389 from a CMSP course and pass both the driver’s knowledge and motorcycle knowledge tests."
+  },
+  {
+    question: "Motorcycle instruction permit holders (M1/M2) must have their permit for at least:",
+    options: [
+      "3 months before licensing",
+      "6 months before being issued a license (for under‑21 riders)",
+      "12 months before licensing",
+      "There is no minimum time requirement"
+    ],
+    correctIndex: 1,
+    explanation: "Under‑21 riders must hold the motorcycle instruction permit for at least 6 months before being issued a license."
+  },
+  {
+    question: "Which of the following is a restriction that applies to ALL M1/M2 instruction permits?",
+    options: [
+      "You may not ride more than $55$ mph",
+      "You may not ride at night, carry passengers, or ride on freeways",
+      "You may only ride on city streets with a posted limit under $35$ mph",
+      "You may not leave your home city"
+    ],
+    correctIndex: 1,
+    explanation: "The Class M1/M2 instruction permit does not allow freeway riding, carrying passengers, or riding at night."
+  },
+  {
+    question: "How long is a DL 389 (Certificate of Completion of Motorcycle Training) valid from the date of issue?",
+    options: [
+      "6 months",
+      "12 months",
+      "18 months",
+      "Until the rider turns 21"
+    ],
+    correctIndex: 1,
+    explanation: "The DL 389 is valid for 12 months from the issue date."
+  },
+  {
+    question: "A motorized scooter may be used for:",
+    options: [
+      "The DMV motorcycle skills test only",
+      "The DMV motorcycle skills test or road test",
+      "Normal riding on public roads with any class of driver license",
+      "Riding on sidewalks and bike paths only"
+    ],
+    correctIndex: 2,
+    explanation: "A motorized scooter may be driven with any class driver license, but it may not be used to take the motorcycle skills test."
+  },
+
+  // SPECIAL CASES: SHORT‑TERM RENTALS, MOPEDS, E‑BIKES
+
+  {
+    question: "A person with a valid California driver license of any class may operate a short‑term (48 hours or less) rental motorized bicycle:",
+    options: [
+      "Only if they have a Class M2 endorsement",
+      "Without any special exam or Class M2 endorsement",
+      "Only if they pass an on‑the‑spot DMV test",
+      "Only if they are at least 25 years old"
+    ],
+    correctIndex: 1,
+    explanation: "The law allows a licensed driver of any class to operate a short‑term rental motorized bicycle (48 hours or less) without a special exam or M2 endorsement."
+  },
+  {
+    question: "Which statement about electric bicycles in California is TRUE?",
+    options: [
+      "They must be registered and insured like motorcycles",
+      "Operators must have a Class M1 license",
+      "All classes of electric bicycles are exempt from DMV registration, driver license, and insurance requirements",
+      "They may not be ridden in any bicycle lane"
+    ],
+    correctIndex: 2,
+    explanation: "Electric bicycle classes 1, 2, and 3 are exempt from motor vehicle financial responsibility, DL, and license plate requirements."
+  },
+  {
+    question: "Where may a motorized bicycle, moped, or Class 3 electric bicycle NOT be ridden unless local law specifically permits it?",
+    options: [
+      "On city streets",
+      "On bicycle paths or trails, equestrian trails, hiking trails, or recreational trails not adjacent to a road",
+      "In the right lane of a freeway",
+      "On private driveways"
+    ],
+    correctIndex: 1,
+    explanation: "Mopeds, motorized bicycles, and Class 3 e‑bikes may not be ridden on certain paths or trails unless they are next to a road or local law allows it."
+  },
+
+  // ROAD / FREEWAY / LANE RULES
+
+  {
+    question: "A motor‑driven cycle (less than $150$ cc) may NOT be operated:",
+    options: [
+      "On any public street",
+      "On a freeway or expressway where signs prohibit motor‑driven cycles",
+      "In residential areas",
+      "On roads with speed limits under $35$ mph"
+    ],
+    correctIndex: 1,
+    explanation: "Motor‑driven cycles are prohibited on freeways or expressways where signs are posted banning them."
+  },
+  {
+    question: "It is illegal to ride a motor‑driven cycle, moped, motorized bicycle, or electric bicycle on a freeway or expressway:",
+    options: [
+      "At night",
+      "If it has less than $250$ watts of power",
+      "Whenever signs are posted prohibiting their operation",
+      "Only in the left lane"
+    ],
+    correctIndex: 2,
+    explanation: "These vehicles may not be ridden on a freeway or expressway where signs prohibit their operation."
+  },
+  {
+    question: "When using a carpool (HOV) lane on a freeway, you may enter or exit:",
+    options: [
+      "By crossing the double parallel lines if traffic is light",
+      "Only at designated entry or exit places where the lines are broken",
+      "Anywhere within one half mile of your exit",
+      "Only when traffic is stopped"
+    ],
+    correctIndex: 1,
+    explanation: "You may not cross double parallel lines; you must enter or exit an HOV lane only where designated."
+  },
+  {
+    question: "When a motorcycle is towing a trailer on a freeway, the rider:",
+    options: [
+      "May use any lane if traveling at the speed limit",
+      "Must not exceed $55$ mph and must remain in the right lane (or right two lanes on a four‑lane highway)",
+      "May travel in the HOV lane if carrying a passenger",
+      "Must always use hazard flashers"
+    ],
+    correctIndex: 1,
+    explanation: "A motorcycle towing a trailer must stay at or below $55$ mph and remain in the right lane (or right two lanes) and may not use carpool lanes."
+  },
+
+  // EQUIPMENT / HELMET / EARPLUG LAWS
+
+  {
+    question: "Who is required to wear a U.S. DOT‑compliant motorcycle safety helmet when riding in California?",
+    options: [
+      "Only riders under $18$ years old",
+      "Only riders and passengers under $21$ years old",
+      "Only the operator",
+      "All riders and passengers when on a motorcycle, motor‑driven cycle, or motorized bicycle"
+    ],
+    correctIndex: 3,
+    explanation: "California Vehicle Code §27803 requires all riders and passengers to wear a U.S. DOT‑compliant motorcycle safety helmet."
+  },
+  {
+    question: "Which of the following is TRUE about modifying a motorized scooter’s exhaust system?",
+    options: [
+      "It is allowed if it makes the scooter louder",
+      "It is allowed if it improves fuel economy",
+      "It must not be modified or altered",
+      "It is allowed only for scooters with engines under $50$ cc"
+    ],
+    correctIndex: 2,
+    explanation: "The exhaust system of a motorized scooter must not be modified or altered."
+  },
+  {
+    question: "California law regarding headsets or earplugs while riding says you may:",
+    options: [
+      "Wear any kind of earphones that block all sound",
+      "Wear earplugs in both ears only if they are designed to reduce harmful noise and still allow you to hear sirens and horns",
+      "Wear ear coverage only in one ear",
+      "Never wear any ear protection while riding"
+    ],
+    correctIndex: 1,
+    explanation: "You may use earplugs in both ears if they are specifically designed to reduce injurious noise and do not prevent you from hearing sirens or horns."
+  },
+  {
+    question: "When carrying a passenger, your motorcycle must be equipped with:",
+    options: [
+      "A backrest and saddlebags",
+      "A seat large enough for two and passenger footrests",
+      "An engine larger than $500$ cc",
+      "A windshield and fairing"
+    ],
+    correctIndex: 1,
+    explanation: "You must have a proper passenger seat and footrests so the passenger can sit and support themselves safely."
+  },
+
+  // TESTING / CHEATING
+
+  {
+    question: "During the DMV motorcycle knowledge test, using a cell phone, cheat sheet, or handbook is:",
+    options: [
+      "Permitted if you do not talk to anyone",
+      "Permitted only once",
+      "Considered cheating and will result in test failure and possible action against your driving privilege",
+      "Allowed if other applicants are also using them"
+    ],
+    correctIndex: 2,
+    explanation: "Use of any testing aid is strictly prohibited and may lead to failure and DMV action against your driving privilege."
+  },
+
+  // COLLISION / INSURANCE / REPORTING RULES
+
+  {
+    question: "Which vehicles are subject to the financial responsibility (insurance) laws in California?",
+    options: [
+      "Passenger vehicles only",
+      "Passenger vehicles and trucks only",
+      "Motorcycles must meet the same financial responsibility laws as other motor vehicles",
+      "Motorcycles are exempt from insurance requirements"
+    ],
+    correctIndex: 2,
+    explanation: "The financial responsibility provisions of the Vehicle Code apply to motorcycle owners and operators."
+  },
+  {
+    question: "You must file a Report of Traffic Accident Occurring in California (SR1) with DMV when:",
+    options: [
+      "Police have already written a report",
+      "You are at fault but the damage is under $1{,}000$",
+      "The collision causes more than $1{,}000$ in property damage to anyone or anyone is injured, no matter how slightly",
+      "The collision occurs outside California"
+    ],
+    correctIndex: 2,
+    explanation: "An SR1 must be filed within 10 days if there is more than $1{,}000$ in property damage or any injury, even minor."
+  },
+  {
+    question: "Who is responsible for submitting the SR1 accident report to DMV after a qualifying collision involving a motorcycle?",
+    options: [
+      "The California Highway Patrol (CHP)",
+      "The local police department",
+      "You or your insurance/representative; police will not submit it for you",
+      "Only the other driver"
+    ],
+    correctIndex: 2,
+    explanation: "CHP or police do not file the SR1 for you; you or your insurance/representative must submit it to DMV."
+  },
+
+  // DUI / BAC / IMPAIRMENT
+
+  {
+    question: "In California, it is illegal for a rider 21 or older to operate a motorcycle with a BAC of:",
+    options: [
+      "$0.01\\%$ or above",
+      "$0.04\\%$ or above",
+      "$0.08\\%$ or above",
+      "$0.10\\%$ or above"
+    ],
+    correctIndex: 2,
+    explanation: "For riders 21 and over, riding with a BAC of $0.08\\%$ or more is illegal."
+  },
+  {
+    question: "For a rider under 21 years old, riding with which BAC is illegal in California?",
+    options: [
+      "$0.01\\%$ or above",
+      "$0.04\\%$ or above",
+      "$0.08\\%$ or above",
+      "Only $0.10\\%$ or above"
+    ],
+    correctIndex: 0,
+    explanation: "Under‑21 riders are subject to zero‑tolerance rules; a BAC of $0.01\\%$ or more is illegal."
+  },
+  {
+    question: "Which of the following best describes how alcohol is eliminated from the body?",
+    options: [
+      "Exercise can quickly burn off alcohol",
+      "Fresh air and coffee can sober you up immediately",
+      "Only time eliminates alcohol; on average about one drink per hour is processed",
+      "A cold shower will rapidly lower your BAC"
+    ],
+    correctIndex: 2,
+    explanation: "Only time reduces BAC; on average, the body eliminates about one standard drink per hour, though this varies."
+  },
+
+  // EVADING OFFICERS / PENALTIES
+
+  {
+    question: "Willfully fleeing or attempting to evade a peace officer performing their duties is:",
+    options: [
+      "A minor traffic violation",
+      "A misdemeanor punishable by up to one year in county jail",
+      "Legal if you believe you did nothing wrong",
+      "Only illegal if the officer is in an unmarked unit"
+    ],
+    correctIndex: 1,
+    explanation: "Evading a peace officer is a misdemeanor punishable by up to one year in county jail under Vehicle Code §2800.1."
+  },
+  {
+    question: "If you cause serious bodily injury to someone while evading a peace officer on your motorcycle, you may be subject to:",
+    options: [
+      "A small fine but no jail time",
+      "Only a license suspension",
+      "Imprisonment in state prison for 3, 5, or 7 years, or up to one year in county jail, plus a fine",
+      "Only mandatory traffic school"
+    ],
+    correctIndex: 2,
+    explanation: "Causing serious bodily injury while evading an officer can result in 3, 5, or 7 years in state prison or up to one year in county jail and substantial fines (VC §2800.3(a))."
+  },
+  {
+    question: "Causing a death while evading a peace officer is punishable by:",
+    options: [
+      "A warning and license suspension only",
+      "A maximum of 30 days in jail",
+      "Imprisonment in state prison for 4, 6, or 10 years",
+      "A fine only, with no jail time"
+    ],
+    correctIndex: 2,
+    explanation: "If someone is killed while you are willfully evading a peace officer, you face 4, 6, or 10 years in state prison under VC §2800.3(b)."
+  },
+
+  // TREAD LIGHTLY / OFF‑HIGHWAY
+
+  {
+    question: "Which of the following is a TREAD LIGHTLY! recommendation for off‑highway riding?",
+    options: [
+      "Pioneering new trails wherever possible",
+      "Crossing stream banks and meadows to save time",
+      "Staying off soft, wet roads and trails that are easily torn up",
+      "Ignoring regulatory signs on public land"
+    ],
+    correctIndex: 2,
+    explanation: "TREAD LIGHTLY! encourages riders to avoid soft, wet trails that can be damaged and to obey gate closures and regulations."
+  },
+  {
+    question: "When riding on public lands managed by the U.S. Forest Service or BLM, you should:",
+    options: [
+      "Ignore local travel maps and signs",
+      "Obtain a travel map and follow posted regulations",
+      "Create your own shortcuts and switchbacks on hills",
+      "Ride anywhere unless someone tells you to stop"
+    ],
+    correctIndex: 1,
+    explanation: "You should obtain and follow official travel maps and regulations from agencies such as USFS, BLM, or state parks."
+  }
+];
+
+// To merge without removing anything:
+ALL_QUESTIONS.push(...MORE_LEGAL_QUESTIONS);
+
 // Merge without removing anything
-ALL_QUESTIONS.push(...NEW_QUESTIONS);
+//ALL_QUESTIONS.push(...NEW_QUESTIONS);
 
 // =======================================
 // STATE VARIABLES
