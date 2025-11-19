@@ -1029,7 +1029,614 @@ const ALL_QUESTIONS = [
     ],
     correctIndex: 1,
     explanation: "Entering a turn too fast is the #1 cause of corner crashes."
+  },
+
+  {
+    question: "Define hypothermia.",
+    options: [
+      "Above normal body temperature",
+      "Normal body temperature",
+      "Below normal body temperature",
+      "Average motorcycle temperature"
+    ],
+    correctIndex: 2,
+    explanation: "Hypothermia is abnormally low body temperature, which can happen to riders without proper gear."
+  },
+  {
+    question: "What should you do about a tailgating driver?",
+    options: [
+      "Throw objects at them",
+      "Brake-check them",
+      "Increase distance from the vehicle ahead",
+      "Speed up"
+    ],
+    correctIndex: 2,
+    explanation: "By increasing the gap to the vehicle ahead, you give yourself room if the tailgater hits you."
+  },
+  {
+    question: "During daytime riding, how should your headlight be set?",
+    options: [
+      "Off",
+      "On low beam",
+      "On high beam when it does not interfere with others",
+      "Flashing"
+    ],
+    correctIndex: 2,
+    explanation: "Using high beam during the day improves your visibility if it does not blind others."
+  },
+  {
+    question: "Which type of helmet provides the most protection in a crash?",
+    options: [
+      "Half-shell helmet",
+      "Three-quarter helmet",
+      "Modular helmet",
+      "Full-face helmet"
+    ],
+    correctIndex: 3,
+    explanation: "Full-face helmets protect the entire head, including the chin and face."
+  },
+  {
+    question: "Where should the inexperienced rider be positioned in a group?",
+    options: [
+      "At the tail end",
+      "In front of the group",
+      "In the middle of the group",
+      "Directly behind the leader"
+    ],
+    correctIndex: 3,
+    explanation: "The leader should set a pace that suits the least experienced rider, usually right behind them."
+  },
+  {
+    question: "The most effective way to stop quickly is to:",
+    options: [
+      "Use both brakes simultaneously in a straight line",
+      "Use only the front brake",
+      "Use only the rear brake",
+      "Engine brake only"
+    ],
+    correctIndex: 0,
+    explanation: "Using both brakes in a straight line gives maximum stopping power and stability."
+  },
+  {
+    question: "The best way to become a more skilled rider is to:",
+    options: [
+      "Take long trips",
+      "Attend more training classes",
+      "Watch friends ride",
+      "Watch videos online only"
+    ],
+    correctIndex: 1,
+    explanation: "Formal training improves your skills and hazard response more efficiently than casual riding."
+  },
+  {
+    question: "Why does a rider change gears?",
+    options: [
+      "To stop",
+      "To start from a stop",
+      "To match engine speed to road speed",
+      "To go around a curve"
+    ],
+    correctIndex: 2,
+    explanation: "Shifting gears keeps the engine in the correct RPM range for the current road speed."
+  },
+  {
+    question: "When should you check your motorcycle's tire pressure?",
+    options: [
+      "Every time before you ride",
+      "Once a week",
+      "Once a month",
+      "When it looks low"
+    ],
+    correctIndex: 0,
+    explanation: "Correct tire pressure is critical for traction and handling, so check it before every ride."
+  },
+  {
+    question: "The friction zone is:",
+    options: [
+      "Where the engine begins transmitting power to the rear wheel",
+      "When the rear wheel spins",
+      "Sliding on its side",
+      "Popping a wheelie"
+    ],
+    correctIndex: 0,
+    explanation: "The friction zone is the part of the clutch lever travel where the engine just begins to move the bike."
+  },
+  {
+    question: "How should the passenger sit on the motorcycle?",
+    options: [
+      "Holding the back of the seat",
+      "Close to the rider, holding their sides or handholds",
+      "On the fender",
+      "On the fuel tank"
+    ],
+    correctIndex: 1,
+    explanation: "Passengers should sit close to the rider and hold on properly for stability."
+  },
+  {
+    question: "The main cause of motorcycle accidents is:",
+    options: [
+      "Improper braking",
+      "Improper cornering",
+      "Other drivers",
+      "An interaction of multiple factors"
+    ],
+    correctIndex: 3,
+    explanation: "Crashes usually result from several factors together, not a single cause."
+  },
+  {
+    question: "Neutral on most motorcycles is located:",
+    options: [
+      "All the way down",
+      "Between first and second gear",
+      "All the way up",
+      "Between second and third gear"
+    ],
+    correctIndex: 1,
+    explanation: "Neutral is typically found between first and second gear."
+  },
+  {
+    question: "A good following distance to give you time to stop or swerve is:",
+    options: [
+      "2 seconds",
+      "4 seconds",
+      "12 seconds",
+      "20 seconds"
+    ],
+    correctIndex: 1,
+    explanation: "A four-second following distance gives most riders enough time to react to hazards."
+  },
+  {
+    question: "Target fixation means:",
+    options: [
+      "Not focusing on the road",
+      "Being distracted",
+      "Looking at one thing too long so you steer toward it",
+      "Aiming at a specific object intentionally"
+    ],
+    correctIndex: 2,
+    explanation: "You tend to go where you look, so staring at a hazard can cause you to hit it."
+  },
+  {
+    question: "Countersteering in a normal-speed turn means:",
+    options: [
+      "Pushing the handlebar on the side you want to go",
+      "Pushing opposite the direction you want to go",
+      "Pulling the handlebar toward you in the direction you want to go",
+      "Pulling opposite the direction you want to go"
+    ],
+    correctIndex: 0,
+    explanation: "Push left to go left, push right to go right—that is countersteering."
+  },
+  {
+    question: "What does the tachometer show?",
+    options: [
+      "Road speed",
+      "Gear position",
+      "Engine speed in RPM",
+      "Miles traveled"
+    ],
+    correctIndex: 2,
+    explanation: "The tachometer shows engine revolutions per minute."
+  },
+  {
+    question: "Threshold braking is:",
+    options: [
+      "Barely using the brakes",
+      "Using only the front brake",
+      "Using only the rear brake",
+      "Using both brakes as hard as possible without locking either wheel"
+    ],
+    correctIndex: 3,
+    explanation: "Threshold braking is maximum braking force just short of skidding."
+  },
+  {
+    question: "What is the best lane position at intersections?",
+    options: [
+      "Always the middle of the lane",
+      "There is no single best position",
+      "Always the left part of the lane",
+      "Always the right part of the lane"
+    ],
+    correctIndex: 1,
+    explanation: "Lane position depends on where you are most visible and have the best escape paths."
+  },
+  {
+    question: "What is hazardous about starting off uphill?",
+    options: [
+      "Not seeing the other side",
+      "The motorcycle may roll backward",
+      "Stalling the motorcycle",
+      "Spinning the tire"
+    ],
+    correctIndex: 1,
+    explanation: "On a hill the bike can roll back if you don’t control it with the brake and clutch."
+  },
+  {
+    question: "If your motorcycle starts to weave while crossing a metal grate bridge, what should you do?",
+    options: [
+      "Speed up",
+      "Slow down rapidly",
+      "Relax and maintain a steady speed",
+      "Turn sharply to correct it"
+    ],
+    correctIndex: 2,
+    explanation: "Weaving on metal grates is normal; stay relaxed and keep a steady line."
+  },
+  {
+    question: "Where should you downshift before entering a curve?",
+    options: [
+      "In the middle of the curve",
+      "Before the curve",
+      "After exiting the curve",
+      "You should never downshift"
+    ],
+    correctIndex: 1,
+    explanation: "Shift before the curve so the bike is stable and in the correct gear."
+  },
+  {
+    question: "If the rear wheel locks up while stopping straight on a good surface, you should:",
+    options: [
+      "Release the rear brake immediately",
+      "Keep it locked until the motorcycle comes to a complete stop",
+      "Shift into neutral",
+      "Accelerate slightly"
+    ],
+    correctIndex: 1,
+    explanation: "On good traction, keeping the rear wheel locked can prevent a high-side crash."
+  },
+  {
+    question: "What is the best way to avoid hazards?",
+    options: [
+      "Ride faster",
+      "Look well ahead",
+      "Ride in the right tire track",
+      "Honk often"
+    ],
+    correctIndex: 1,
+    explanation: "Scanning far ahead lets you see and avoid most hazards early."
+  },
+  {
+    question: "Before changing lanes to the left, you should:",
+    options: [
+      "Only use your mirror",
+      "Look over your left shoulder",
+      "Speed up",
+      "Use your horn"
+    ],
+    correctIndex: 1,
+    explanation: "A head check over your shoulder reveals anything in your blind spot."
+  },
+  {
+    question: "Why is hesitation dangerous when passing?",
+    options: [
+      "It confuses other drivers",
+      "It keeps you in the oncoming lane longer",
+      "It reduces your room to react",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "Hesitating while passing increases the time you’re exposed to oncoming traffic."
+  },
+  {
+    question: "Your motorcycle headlight should be used:",
+    options: [
+      "Only at night",
+      "Only in fog",
+      "At all times, day or night",
+      "Only on the highway"
+    ],
+    correctIndex: 2,
+    explanation: "Running your headlight all the time makes you more visible to others."
+  },
+  {
+    question: "What is the best way to swerve?",
+    options: [
+      "Brake hard then turn",
+      "Brake while swerving",
+      "Make two quick turns—one to avoid the hazard, one to get back on path",
+      "Lean as far as possible and hope"
+    ],
+    correctIndex: 2,
+    explanation: "A proper swerve is a quick dodge followed immediately by a counter-dodge."
+  },
+  {
+    question: "When riding downhill, you should:",
+    options: [
+      "Shift to a higher gear",
+      "Use only the rear brake",
+      "Shift to a lower gear and use engine braking",
+      "Coast in neutral"
+    ],
+    correctIndex: 2,
+    explanation: "Lower gear plus engine braking helps control speed on descents."
+  },
+  {
+    question: "The best way to handle a tailgater is to:",
+    options: [
+      "Flash your brake light and increase space ahead of you",
+      "Brake suddenly to scare them",
+      "Speed away as fast as possible",
+      "Ride on the shoulder"
+    ],
+    correctIndex: 0,
+    explanation: "Flash your brake light to warn them and open a bigger space cushion ahead."
+  },
+  {
+    question: "How can a rider increase visibility to others?",
+    options: [
+      "Wear reflective or bright clothing",
+      "Use headlight high beam during the day when appropriate",
+      "Choose a good lane position",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "Visibility is improved by your clothing, lights, and lane position."
+  },
+  {
+    question: "Which part of the lane is often the most slippery?",
+    options: [
+      "Left tire track",
+      "Right tire track",
+      "Center of the lane",
+      "All parts are equally slippery"
+    ],
+    correctIndex: 2,
+    explanation: "Oil and fluids from cars tend to collect in the center of the lane."
+  },
+  {
+    question: "How should two motorcycles ride together most of the time?",
+    options: [
+      "Side by side",
+      "In a staggered formation",
+      "Single file only",
+      "Randomly, depending on preference"
+    ],
+    correctIndex: 1,
+    explanation: "A staggered formation provides better space cushions and visibility."
+  },
+  {
+    question: "If the front tire goes flat, what usually happens?",
+    options: [
+      "The rear will slide out immediately",
+      "Steering becomes heavy and the front may wobble",
+      "You can accelerate out of it",
+      "You probably won’t notice"
+    ],
+    correctIndex: 1,
+    explanation: "A front flat strongly affects steering and can cause wobbling."
+  },
+  {
+    question: "If your engine locks or 'freezes' in traffic, you should:",
+    options: [
+      "Honk your horn",
+      "Pull in the clutch immediately",
+      "Apply only the rear brake",
+      "Turn the engine off with the key"
+    ],
+    correctIndex: 1,
+    explanation: "Pulling in the clutch prevents the rear wheel from locking when the engine seizes."
+  },
+  {
+    question: "In a normal stop, you should:",
+    options: [
+      "Use only the rear brake",
+      "Use both brakes evenly",
+      "Use only the front brake",
+      "Shift to neutral immediately"
+    ],
+    correctIndex: 1,
+    explanation: "Using both brakes together gives smooth, controlled stopping."
+  },
+  {
+    question: "When a dog runs toward your path, you should:",
+    options: [
+      "Speed up and hit it",
+      "Aim for the dog's head",
+      "Slow down, then accelerate away",
+      "Honk continuously"
+    ],
+    correctIndex: 2,
+    explanation: "Slow first so you can predict its movement, then accelerate past the dog."
+  },
+  {
+    question: "When carrying a load, where should it be placed?",
+    options: [
+      "As high as possible",
+      "As far forward and as low as possible",
+      "Behind the rear axle",
+      "On the handlebars"
+    ],
+    correctIndex: 1,
+    explanation: "Forward and low placement keeps the motorcycle more stable."
+  },
+  {
+    question: "What is the best lane position for being seen?",
+    options: [
+      "Always the left tire track",
+      "Always the right tire track",
+      "Always the center",
+      "It depends on the situation"
+    ],
+    correctIndex: 3,
+    explanation: "You choose lane position based on where you’re most visible and safest at that moment."
+  },
+  {
+    question: "What should you avoid when riding over obstacles?",
+    options: [
+      "Rising slightly off the seat",
+      "Keeping the motorcycle straight",
+      "Rolling on the throttle a bit",
+      "Slamming the brakes right before the obstacle"
+    ],
+    correctIndex: 3,
+    explanation: "Hard braking on an obstacle can make the front wheel lose traction."
+  },
+  {
+    question: "If the motorcycle starts wobbling, you should:",
+    options: [
+      "Brake hard immediately",
+      "Accelerate sharply",
+      "Grip the handlebars firmly and gradually slow down",
+      "Jump off the motorcycle"
+    ],
+    correctIndex: 2,
+    explanation: "Stabilize the wobble by holding the bars firmly and rolling off the throttle smoothly."
+  },
+  {
+    question: "The best clothing for nighttime riding is:",
+    options: [
+      "Dark clothes to avoid reflection",
+      "Bright or reflective clothing",
+      "Loose clothing",
+      "Baggy pants and hoodie"
+    ],
+    correctIndex: 1,
+    explanation: "Reflective or bright gear makes you more visible at night."
+  },
+  {
+    question: "In rain, the most slippery time is:",
+    options: [
+      "Right after the rain starts",
+      "After 30 minutes of rain",
+      "After 1 hour of rain",
+      "After 2 hours of rain"
+    ],
+    correctIndex: 0,
+    explanation: "Oil and residues are lifted by the first minutes of rain, making the road slick."
+  },
+  {
+    question: "When downshifting for a curve, you should:",
+    options: [
+      "Shift after entering the curve",
+      "Shift before the curve",
+      "Coast through the curve in neutral",
+      "Shift repeatedly in the middle of the curve"
+    ],
+    correctIndex: 1,
+    explanation: "Downshift before the curve so the bike stays stable and you can accelerate out smoothly."
+  },
+  {
+    question: "The engine cutoff switch is used when:",
+    options: [
+      "Stopping normally",
+      "Parking overnight",
+      "The throttle is stuck or in another emergency",
+      "The ignition key is lost"
+    ],
+    correctIndex: 2,
+    explanation: "Use the kill switch for quick engine shutdown in an emergency like a stuck throttle."
+  },
+  {
+    question: "A motorcycle’s blind spots can be checked by:",
+    options: [
+      "Mirror checks only",
+      "Turning your head to look",
+      "Looking at shadows",
+      "Listening for other vehicles"
+    ],
+    correctIndex: 1,
+    explanation: "A shoulder check is required to see into blind spots."
+  },
+  {
+    question: "If you are being passed, you should:",
+    options: [
+      "Move to the center portion of your lane",
+      "Speed up to prevent the pass",
+      "Move onto the shoulder",
+      "Brake suddenly"
+    ],
+    correctIndex: 0,
+    explanation: "Moving to the lane center increases your space cushion from the passing vehicle."
+  },
+  {
+    question: "Hydroplaning occurs when tires:",
+    options: [
+      "Grip the road better than usual",
+      "Ride on top of a film of water",
+      "Deflate suddenly",
+      "Overheat"
+    ],
+    correctIndex: 1,
+    explanation: "When hydroplaning, tires lose contact with the pavement and you lose traction."
+  },
+  {
+    question: "What is the best way to negotiate a curve?",
+    options: [
+      "Enter the curve slowly and accelerate out",
+      "Enter fast and coast through",
+      "Brake in the middle of the curve",
+      "Keep the motorcycle upright"
+    ],
+    correctIndex: 0,
+    explanation: "Slow before the curve, look through it, and gently roll on the throttle exiting."
+  },
+  {
+    question: "When should you ride in a single-file formation?",
+    options: [
+      "On straightaways",
+      "In curves or when entering or leaving highways",
+      "In city traffic only",
+      "Never, always stagger"
+    ],
+    correctIndex: 1,
+    explanation: "Single file is safest in tight conditions like curves and freeway ramps."
+  },
+  {
+    question: "A wobble is most commonly caused by:",
+    options: [
+      "Improper tire pressure or loading",
+      "Cold weather",
+      "High beam usage",
+      "Wearing loose clothing"
+    ],
+    correctIndex: 0,
+    explanation: "Incorrect tire pressure, loading, or loose parts commonly lead to wobbles."
+  },
+  {
+    question: "If your chain snaps or breaks while riding, you should:",
+    options: [
+      "Pull in the clutch and coast to a stop",
+      "Accelerate hard",
+      "Continue riding normally",
+      "Jump off immediately"
+    ],
+    correctIndex: 0,
+    explanation: "Pull the clutch to prevent the rear wheel from locking and coast to a safe stop."
+  },
+  {
+    question: "When preparing to turn, you should:",
+    options: [
+      "Look through the turn where you want to go",
+      "Slow down only after entering",
+      "Close the throttle in the middle",
+      "Brake hard in the middle"
+    ],
+    correctIndex: 0,
+    explanation: "Your motorcycle goes where you look—so look through the turn, not at the ground."
+  },
+  {
+    question: "Fine-tuning your lane position helps you:",
+    options: [
+      "Be more visible",
+      "Avoid hazards",
+      "Maintain space cushions",
+      "All of the above"
+    ],
+    correctIndex: 3,
+    explanation: "Good lane positioning affects visibility, hazard avoidance, and space around you."
+  },
+  {
+    question: "If a dog runs into your path, you should:",
+    options: [
+      "Kick the dog",
+      "Stop and yell at it",
+      "Slow down, then speed up to get past it",
+      "Aim directly at it"
+    ],
+    correctIndex: 2,
+    explanation: "Slowing first and then accelerating helps you avoid the dog’s path."
   }
+  
 ];
 
 // =======================================
